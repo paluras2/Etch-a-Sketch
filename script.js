@@ -2,26 +2,26 @@
 const container = document.querySelector('.cont');
 container.style.padding = "11px"
 container.style.display = "grid"
-container.style.gridTemplateColumns= `repeat(16,10px)`
+
 container.style.border= "1px solid #A1C298"
-container.style.content="auto"
+
+
+let gridSize = prompt("gridsize")
+
+
+console.log(gridSize)
+
+
+
+
+container.style.gridTemplateColumns= `repeat(${gridSize},10px)`
+container.style.gridTemplateRows= `repeat(${gridSize},10px)`
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-for(i = 0 ; i<16*16;i++){
+for(i = 0 ; i<gridSize*gridSize;i++){
     const newDiv = document.createElement("div");
     newDiv.className = "theDiv";
     newDiv.style.padding="5px 5px"
