@@ -9,8 +9,9 @@ container.style.border= "1px solid #A1C298"
 
 let gridSize = prompt("Chose a canvas size");
 let color = "red";
+let erase = "#C6EBC5";
 
-console.log(gridSize)
+console.log(erase)
 
 
 
@@ -19,7 +20,7 @@ container.style.gridTemplateColumns= `repeat(${gridSize},10px)`
 container.style.gridTemplateRows= `repeat(${gridSize},10px)`
 
 
-let division ;
+
 //// The divs
 
 for(i = 0 ; i<gridSize*gridSize;i++){
@@ -27,7 +28,7 @@ for(i = 0 ; i<gridSize*gridSize;i++){
     const newDiv = document.createElement("div");
     newDiv.className = "theDiv";
     newDiv.style.padding="5px 5px"
-    newDiv.style.backgroundColor = "#C6EBC5"
+    newDiv.style.backgroundColor = `${erase}` ;
     newDiv.style.border = "1px solid #FBF2CF"
 
     document.querySelector(".cont").appendChild(newDiv)
@@ -49,6 +50,11 @@ function btnColorPrompt(){
 }
 btnColor.addEventListener("click",btnColorPrompt);
 
+const btnErase = document.querySelector(".eraser");
+function btnEraser(){
+    color = "#C6EBC5"
+}
+btnErase.addEventListener("click",btnEraser)
 
 
 
