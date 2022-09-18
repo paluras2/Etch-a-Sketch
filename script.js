@@ -16,8 +16,8 @@ console.log(erase)
 
 
 
-container.style.gridTemplateColumns= `repeat(${gridSize},10px)`
-container.style.gridTemplateRows= `repeat(${gridSize},10px)`
+container.style.gridTemplateColumns= `repeat(${gridSize},20px)`
+container.style.gridTemplateRows= `repeat(${gridSize},20px)`
 
 
 
@@ -53,6 +53,7 @@ btnColor.addEventListener("click",btnColorPrompt);
 const btnErase = document.querySelector(".eraser");
 function btnEraser(){
     color = "#C6EBC5"
+    
 }
 btnErase.addEventListener("click",btnEraser)
 
